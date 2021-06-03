@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write-On Effect Js</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: powderblue;
+    }
+    .container {
+        width: 100%;
+        height: 10vh;
+        display: grid;
+        place-items: center;
+    }
+    .write-on-text {
+        font-size: 2rem;
+        font-family: 'consolas';
+        font-weight: 600;
+        color: #4f4f4f;
+    }
+    .container > a {
+        font-size: 1.2rem;
+        font-family: 'consolas';
+        font-style: italic;
+        color: rgb(235, 133, 55);
+        text-decoration: underline;
+    }
+    .container > a:hover {
+        transition: all ease-in-out .5s;
+        color: rgb(142, 65, 7);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="write-on-text"></div>
+        <a href="https://github.com/jerryHolurantie/write-on-js.git" target="_blank">Click here to view source</a>
+    </div>
+</body>
+<script src="./write-on.js"></script>
+<script>
+    let writeOnElement = document.querySelector(".write-on-text");
+
+    const text = "This Is My WriteOn Effect With Javascript";
+
+    const textArray = ["This", "is", "my", "WriteOn", "Effect", "with", "JavaScript"];
+
+    // writeOn(writeOnElement, null, textArray, 4);
+    writeOn(writeOnElement, text, null, 4);
+</script>
+</html>
