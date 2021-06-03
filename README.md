@@ -33,9 +33,9 @@ There are two js files in this repo:
   
   ```loopTimes``` = Number of times to repeat the write on. **```null```(default) = infinite**
   
-  ```delayTime``` = Time delay between each characters in ```milliseconds```. **default = ```100ms```
+  ```delayTime``` = Time delay between each characters in ```milliseconds```. **default = ```100ms```**
   
-  ```waitTime``` = Time to wait before erasing a text in ```milliseconds```. **default = ```1000ms```
+  ```waitTime``` = Time to wait before erasing a text in ```milliseconds```. **default = ```1000ms```**
   
   
   Hooray!!!
