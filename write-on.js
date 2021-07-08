@@ -1,6 +1,7 @@
-//code by Jeremiah Faluyi
-//This is a JavaScript Write-On Effect
-
+/**
+ * @file This is a JavaScript Write-On Effect
+ * @author Jeremiah Faluyi <faluyijeremiah2018@gmail.com>
+ */
 
 //Async Timeout Function
 const delay = wait => new Promise(res => setTimeout(res, wait)); 
@@ -33,29 +34,43 @@ const erase = async (element, text, delayTime) => {
     return;
 }
 
-const writeOn = async (element, text=null, list=null, loopTimes=null, delayTime=100, waitTime=1000) => {
-    //pointer variable
-    let i = 0;
+/**
+ * 
+ * @param {elementNode} Element your HTML DOM Element
+ * @param {String | Array} text The text you want to write
+ * @param {Number} loopTimes Number of times to repeat the write on.
+ * @param {Number} delayTime Time delay between each characters in seconds
+ * @param {Number} waitTime Time to wait before erasing a text in seconds
+ */
+const writeOn = async (element, text = null, loopTimes = null, delayTime = 0.1, waitTime = 1) => {\
 
-    //check if a Text was passed in
-    if (text){
-        while (true){
-            if (loopTimes && i === loopTimes) break;
-            await write(element, text, delayTime, waitTime);
+    let i = 0
+
+    // Time in milliseconds
+    const newDelayTime = delayTime * 1000
+    const newWaitTime = waitTime * 1000
+
+    // Check if text was String
+    if (typeof text === 'string'){
+        while (true) {
+            if (loopTimes && i === loopTimes) break
+            await write(element, text, newDelayTime, newWaitTime)
             i++;
         }
     }
     
-    //check if an Array was passed in
-    if (list) {
-        let j = 0;
-        while (true){
-            if (loopTimes && i === loopTimes) break;
-            await write(element, list[j], delayTime, waitTime);
-            j++;
-            if (j === list.length){
-                j = 0;
-                i++;
+    // Check if text is an Array
+    if (text.isArray()) {
+        
+        let j = 0
+        
+        while (true) {
+            if (loopTimes && i === loopTimes) break
+            await write(element, list[j], newDelayTime, newWaitTime)
+            j++
+            if (j === list.length) {
+                j = 0
+                i++
             }
         }
     }
