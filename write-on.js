@@ -42,7 +42,7 @@ const erase = async (element, text, delayTime) => {
  * @param {Number} delayTime Time delay between each characters in seconds
  * @param {Number} waitTime Time to wait before erasing a text in seconds
  */
-const writeOn = async (element, text = null, loopTimes = null, delayTime = 0.1, waitTime = 1) => {\
+const writeOn = async (element, text = null, loopTimes = null, delayTime = 0.1, waitTime = 1) => {
 
     let i = 0
 
