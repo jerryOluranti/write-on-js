@@ -1,24 +1,59 @@
 # write-on-js
-Write On Effect JavaScript
-# ---------------------------------------------------------------------------
-There are two js files in this repo: 
+> Write On Effect JavaScript
 
-1. **write-on.js -> For html pages (DOM)**
+## Install
+There are a couple of ways of installing the package depending on what framework or library you're using.
 
-  - Add a script tag to your html file
-  ```<script src="./write-on.js"></script>```
-  - Call the writeOn function ```writeOn(element, text=null, list=null, loopTimes=null, delayTime=100, waitTime=1000)```
+### NPM
+> Coming soon
 
-2. **write-on-node.js -> For React Apps**
+### CDN
+> Coming soon
 
-  - Import ```import writeOn from './path/to/write-on-node.js'```
-  - Call the writeOn function in useEffect
+### Cloning The Repo
+```
+git clone https://github.com/jerryHolurantie/write-on-js.git
+```
 
-  ```
-  useEffect(() => {
-        writeOn(setstate, text=null, list=null, loopTimes=null, delayTime=100, waitTime=1000)
-    }, [])
-  ```
+There are two js files in this repo. `write-on.js` and `write-on-node.js` for vanilla javascript and react projects respectively.
+
+## Usage 
+### With Vanilla JS
+- Add a script tag to your html file
+```
+<script src="./path/to/write-on-node.js"></script>
+
+<!-- Or using cdn -->
+<script src="cdn-link"></script>
+```
+- Call the writeOn function
+```
+writeOn(element, text = null, list = null, loopTimes = null, delayTime = 100, waitTime = 1000)
+```
+
+#### Example
+```
+<script src="./write-on.js"></script>
+<script>
+  let writeOnElement = document.querySelector(".write-on-text")
+  
+  const text = "This Is Write On Effect With Javascript"
+  
+  writeOn(writeOnElement, text);
+</script>
+```
+
+### With React
+- Import the write-on.js file
+```
+import writeOn from './path/to/write-on-node.js'
+```
+- Call the writeOn function in useEffect
+```
+useEffect(() => {
+  writeOn(setstate, text = null, list = null, loopTimes = null, delayTime = 100, waitTime = 1000)
+}, [])
+```
 
   **NOTE->**
   ```Element``` = your HTML DOM Element (For write-on.js)
