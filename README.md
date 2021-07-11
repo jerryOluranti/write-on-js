@@ -67,6 +67,11 @@ Your HTML DOM Element.
 
 The text to be displayed.
 ### React Js
+```
+useEffect(() => {
+  writeOn(setstate, text = null, list = null, loopTimes = null, delayTime = 100, waitTime = 1000)
+}, [])
+```
 #### setstate
 Your `setState` function in react. Visit [Learn react state hook](https://reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper) 
 #### text
@@ -83,14 +88,17 @@ Array of strings
 #### loopTimes
 > Type: Integer
 
-Number of times to repeat the write on. **```null```(default) = infinite**
-  
-  ```delayTime``` = Time delay between each characters in ```milliseconds```. **default = ```100ms```
-  **
-  
-  ```waitTime``` = Time to wait before erasing a text in ```milliseconds```. **default = ```1000ms```**
-  
-  
-  Hooray!!!
-  
-  You are ready to rock :)
+Number of times to repeat the write on. 
+> **`null`(default) = infinite**
+
+#### delayTime
+Time delay between each characters in `seconds`. 
+> **default = `0.1s`**
+
+#### waitTime
+Time to wait before erasing a text in `seconds`. 
+> **default = `1s`**
+
+Hooray!!!
+
+You are ready to rock :)
