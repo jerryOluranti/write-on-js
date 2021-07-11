@@ -28,7 +28,7 @@ There are two js files in this repo. `write-on.js` and `write-on-node.js` for va
 ```
 - Call the writeOn function
 ```
-writeOn(element, text = null, list = null, loopTimes = null, delayTime = 100, waitTime = 1000)
+writeOn(element, text = null, list = null, loopTimes = null, delayTime = 0.1, waitTime = 1)
 ```
 
 #### Example
@@ -55,20 +55,38 @@ useEffect(() => {
 }, [])
 ```
 
-  **NOTE->**
-  ```Element``` = your HTML DOM Element (For write-on.js)
+## API
+### Vanilla JS
+```
+writeOn(element, text = null, loopTimes = null, delayTime = 0.1, waitTime = 1)
+```
+#### element
+Your HTML DOM Element.
+#### text
+> Type: String | Array
+
+The text to be displayed.
+### React Js
+#### setstate
+Your `setState` function in react. Visit [Learn react state hook](https://reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper) 
+#### text
+> Type: String
+
+The text to be displayed.
+#### list
+> Type: Array
+
+Array of strings
+
+> You can either pass in a text or an array of texts. Pass in ```null``` if you are not giving any arguement
+
+#### loopTimes
+> Type: Integer
+
+Number of times to repeat the write on. **```null```(default) = infinite**
   
-  ```setstate``` = your ```setState``` function in react. Visit [Learn react state hook](https://reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper) 
-  
-  ```text``` = the text you want to write
-  
-  ```list``` = array of texts
-  
-  You can either pass in a text or an array of texts. Pass in ```null``` if you are not giving any arguement
-  
-  ```loopTimes``` = Number of times to repeat the write on. **```null```(default) = infinite**
-  
-  ```delayTime``` = Time delay between each characters in ```milliseconds```. **default = ```100ms```**
+  ```delayTime``` = Time delay between each characters in ```milliseconds```. **default = ```100ms```
+  **
   
   ```waitTime``` = Time to wait before erasing a text in ```milliseconds```. **default = ```1000ms```**
   
