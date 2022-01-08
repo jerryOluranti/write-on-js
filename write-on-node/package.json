@@ -1,0 +1,10 @@
+{
+  "name": "write-on-node",
+  "version": "1.0.0",
+  "description": "Write on text effect for websites",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Jeremiah Faluyi",
+  "license": "ISC"
+}
