@@ -6,7 +6,9 @@
 There are a couple of ways of installing the package depending on what framework or library you're using.
 
 ### NPM
-> Coming soon
+```
+npm i write-on-node
+```
 
 ### CDN
 > Coming soon
@@ -47,12 +49,12 @@ writeOn(element, text = null, list = null, loopTimes = null, delayTime = 0.1, wa
 ### With React
 - Import the write-on.js file
 ```
-import writeOn from './path/to/write-on-node.js'
+import writeOn from 'write-on-node'
 ```
 - Call the writeOn function in useEffect
 ```
 useEffect(() => {
-  writeOn(setstate, text = null, list = null, loopTimes = null, delayTime = 100, waitTime = 1000)
+  writeOn({setstate, text, list, loopTimes, delayTime = 0.5, waitTime = 1})
 }, [])
 ```
 
@@ -70,7 +72,7 @@ The text to be displayed.
 ### React Js
 ```
 useEffect(() => {
-  writeOn(setstate, text = null, list = null, loopTimes = null, delayTime = 100, waitTime = 1000)
+  writeOn({setstate, text, list, loopTimes, delayTime = 0.5, waitTime = 1})
 }, [])
 ```
 #### setstate
