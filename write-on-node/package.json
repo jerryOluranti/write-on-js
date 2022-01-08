@@ -1,6 +1,6 @@
 {
   "name": "write-on-node",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Write on text effect for websites",
   "main": "index.js",
   "scripts": {
